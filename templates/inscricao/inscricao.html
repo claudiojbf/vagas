@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block 'title' %} Cadastre a Vaga {% endblock %}
+{% block content %}
+{% include 'partials/_menu.html' %}
+<div class="cadastro_formulario">
+<form action="{%url 'inscrito'%}" method="POST">
+    {% csrf_token %}
+    <div class="form-row">
+        <input type="text" name="vaga_id" value="{{vaga.id}}" hidden>
+        
+        <div class="form-group col-md-6 organiza">
+            <label for="inputExperiencias">Experiencias</label>
+            <textarea id="inputExperiencias" class="form-control" name="experiencias" cols="30" rows="5" placeholder="Coloque aqui suas experiencias" required></textarea>
+        </div>
+
+        <div class="form-group col-md-6 organiza">
+            <label for="inputFaixaSalarial">Faixa Salarial Desejada</label>
+            <select name = "faixa_salarial" id="inputFaixaSalarial" class="form-select" aria-label="Faixa Salarial">
+                <option selected>Selecione a faixa Salarial desejada.</option>
+                <option value="a">Até 1.000</option>
+                <option value="b">De 1.000 a 2.000</option>
+                <option value="c">De 2.000 a 3.000</option>
+                <option value="d">Acima de 3.000</option>
+            </select>
+        </div>
+
+        <div class="form-group col-md-6 organiza">
+            <label for="inputEscolaridade">Escolaridade</label>
+            <select name = "escolaridade" id="inputEscolaridade" class="form-select" aria-label="Escolaridade">
+                <option selected>Selecione o nivel de Escolaridade.</option>
+                <option value="A">Ensino Fundamental</option>
+                <option value="B">Ensino médio</option>
+                <option value="C">Tecnólogo</option>
+                <option value="D">Ensino Superior</option>
+                <option value="E">Pós/MBA/Mestrado</option>
+                <option value="F">Doutorado</option>
+            </select>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary organiza-botao">Candidatar-se</button>
+</form>
+</div>
+{% endblock %}

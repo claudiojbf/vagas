@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'title' %} Cadastro Empresa {% endblock %}
+{% block content %}
+{% include 'partials/_menu.html' %}
+<div class="cadastro_formulario">
+    <form action="{%url 'empresa'%}" method="POST">
+        {% csrf_token %}
+        <div class="form-row">
+            <div class="form-group col-md-6 organiza">
+                <label for="inputNempresa">Nome Da Empresa</label>
+                <input type="text" name="n_empresa" class="form-control" id="inputNempresa" placeholder="Coloque aqui o nome de sua empresa">
+            </div>
+            
+            <div class="form-group col-md-6 organiza">
+                <label for="inputCNPJ">CNPJ</label>
+                <input type="number" name="cnpj" class="form-control" id="inputCNPJ" placeholder="Informe o cnpj de sua empresa">
+            </div>
+
+            <div class="form-group col-md-6 organiza">
+                <label for="inputEmail4">Email</label>
+                <input type="email" name = "email" class="form-control" id="inputEmail4" placeholder="Email">
+            </div>
+
+            <div class="form-group col-md-6 organiza">
+                <label for="inputPassword4">Senha</label>
+                <input type="password" name="senha1" class="form-control" id="inputPassword4" placeholder="Senha">
+            </div>
+
+            <div class="form-group col-md-6 organiza">
+                <label for="inputPassword2">Confirme sua Senha</label>
+                <input type="password" name="senha2" class="form-control" id="inputPassword2" placeholder="Confirme Sua Senha">
+            </div>
+        </div>
+        
+            <button type="submit" class="btn btn-primary organiza-botao">Cadastrar</button>
+    </form>
+</div>
+
+{% endblock %}

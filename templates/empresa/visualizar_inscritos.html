@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block 'title' %}Visualizar Vaga{% endblock %}
+{% block content %}
+{% include 'partials/_menu.html' %}
+    <div class="campo-inscrito">
+        {% for inscrito in inscritos %}
+            <a href="{% url 'detalhes_inscrito' inscrito.id %}">
+                <div class="descricao-inscrito">
+                    <p>Nome do Inscrito: {{inscrito.usuario.first_name}} </p>
+                    <p>Pontos:{{inscrito.pontos}}</p>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block 'title' %}Visualizar Vaga{% endblock %}
+{% block content %}
+{% include 'partials/_menu.html' %}
+<div class="visualizar-vaga">
+    <h1>{{vaga.nome_vaga}}</h1>
+    <p class="descricao">Requisitos:</p>
+    <p class="informacao">{{vaga.requisitos}}</p>
+    <p class="descricao">Faixa Salarial:</p>
+    <p class="informacao">{{vaga.get_faixa_salarial_display}}</p>
+    <p class="descricao">Nivel de Escolaridade:</p>
+    <p class="informacao">{{vaga.get_escolaridade_display}}</p>
+    <p class="descricao">Numero de candidatos:</p>
+    <p class="informacao">{{inscritos}}</p>
+    {% for tipo in tipos %}
+        {% if tipo.tipo == "emp" %}
+            <a href="{% url 'editarvaga' vaga.id %}"><button>editar</button></a>
+            <a href="{% url 'deletarvaga' vaga.id %}"><button>deletar</button></a>
+            <a href="{% url 'visualizar' vaga.id %}"><button>inscritos</button></a>
+        {% elif tipo.tipo == "cad" %}
+            <a href="{% url 'inscricao' vaga.id %}"><button>Inscrever-se</button></a>
+        {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}

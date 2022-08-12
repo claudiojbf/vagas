@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block 'title' %}Visualizar Vaga{% endblock %}
+{% block content %}
+{% include 'partials/_menu.html' %}
+<div class="visualizar-vaga">
+    <h1>{{inscrito.usuario.first_name}}</h1>
+    <p class="descricao">Experiencia:</p>
+    <p class="informacao">{{inscrito.experiencia}}</p>
+    <p class="descricao">Faixa Salarial:</p>
+    <p class="informacao">{{inscrito.get_faixa_salarial_display}}</p>
+    <p class="descricao">Nivel de Escolaridade:</p>
+    <p class="informacao">{{inscrito.get_escolaridade_display}}</p>
+    <p class="descricao">Pontos:</p>
+    <p class="informacao">{{inscrito.pontos}}</p>
+</div>
+{% endblock %}

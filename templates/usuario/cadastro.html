@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block 'title' %} Cadastro {% endblock %}
+{% block content %} 
+    {% include 'partials/_menu.html' %}
+    <div class = "bloco-central">
+        <a href="{% url 'candidato' %}"><button type="submit" class="btn btn-primary cadastro">Você quer se Canditar a uma vaga? Cadastre-se</button></a>
+        <a href="{% url 'empresa' %}"><button type="submit" class="btn btn-primary cadastro">Quer Anunciar as vagas da sua empresa? Cadastre-se</button></a>
+        <p>Já possui um cadastro? <a href="{% url 'login' %}">Aperte aqui !!!</a></p>
+    </div>
+{% endblock %}

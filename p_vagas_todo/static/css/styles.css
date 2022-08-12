@@ -1,0 +1,140 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Tela para escolher qual o cadastro */
+.bloco-central{
+    margin: 20px auto;
+    height: 300px;
+    width: 60%;
+    background-color: #0d6efd;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px #333;
+    text-align: center;
+    color: cornsilk;
+    padding: 20px;
+}
+
+.bloco-central button{
+    background-color: black;
+    width: 200px;
+    height: 200px;
+}
+
+.bloco-central a{
+    margin-top: 10px;
+    color: cornsilk;
+    text-decoration: none;
+}
+
+/* Tela de formulario de cadastro*/
+.cadastro_formulario{
+    background-color: #0d6efd;
+    margin: 30px auto;
+    width: 500px;
+    height: 450px;
+    padding-top: 10px;
+    text-align: center;
+    color: beige;
+    box-shadow: 10px 5px 5px #333;
+    border-radius: 10px;
+}
+
+.organiza{
+    margin: 10px auto;
+    width: 90%;
+}
+
+.organiza-botao{
+    background-color: blue;
+}
+
+/* tela de formulario de login */
+
+.form-login {
+    margin: 100px auto;
+    padding: 20px;
+    width: 450px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: #0d6efd;
+    color:white;
+    text-align: center;
+    box-shadow: 10px 5px 5px #333;
+}
+
+.form-login input{
+    margin: 0px auto 30px auto;
+    width: 90%;
+}
+
+.form-login button{
+    width: 50%;
+    background-color: blue;
+}
+
+/* tela para vizualizar todas as vagas da empresa */
+.campo-vaga{
+    height: 200px;
+    width: 500px;
+    border-radius: 10px;
+    color: white;
+    background-color:#333;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.botao-visualizar{
+    width: 30%;
+    height: 20%;
+    color: white;
+    border-radius: 10px;
+    background-color: #0d6efd;
+    border: none;
+}
+
+/* tela para visualizar as vagas */
+.visualizar-vaga{
+    margin: 20px auto;
+    padding: 10px;
+    height: 550px;
+    width: 800px;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+}
+
+.visualizar-vaga button{
+    background-color: #0d6efd;
+    border-radius: 10px;
+    border: none;
+    width: 12%;
+    height: 6%;
+    margin: 0px auto;
+}
+.descricao{
+    margin-bottom: 0px;
+    font-style:italic
+}
+
+.informacao{
+    margin-top: 0px;
+}
+
+/*Pagina para visualizar inscritos*/
+.campo-inscrito{
+    margin: 10px auto;
+    width: 800px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.descricao-inscrito{
+    background-color: #0d6efd;
+    height: 70px;
+    color: white;
+    margin-top: 10px;
+}

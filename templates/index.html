@@ -1,0 +1,15 @@
+
+{% extends 'base.html' %}
+{% block 'title' %} Pagina Incial {% endblock %}
+
+{% block content %}
+    {% include 'partials/_menu.html' %}
+    {% for vaga in vagas %}
+        <div class="campo-vaga">
+            <h1>{{vaga.nome_vaga}}</h1>
+            <p>{{vaga.get_faixa_salarial_display}}</p>
+            <p>{{vaga.get_escolaridade_display}}</p>
+            <a href="{% url 'visualizarvaga' vaga.id %}"><button class="botao-visualizar">Visualizar</button></a>
+        </div>
+    {% endfor %}
+{% endblock %}
